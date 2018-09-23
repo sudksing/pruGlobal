@@ -1,0 +1,46 @@
+<!DOCTYPE html style="background-color: aliceblue;">
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+	
+	<main>		 
+        <div style="padding-top: 25px; padding-left: 25px; padding-right: 50px">			     
+            <form method="post" action="/webCrawl"> 
+                <div>           
+                    <div class="form-group">
+                        <label for="wcURL">Enter URL to be Web Crawled</label>
+                        <input type="input" class="form-control" id="inputName" name="webCrawledURL"  placeholder="http://www.prudential.co.uk">                    
+                    </div>
+                    
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>                       
+                </div>         
+            </form>
+        </div>
+
+		<div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">  
+				<% try { %>
+					<%= JSON.stringify(result) %>
+					<%= result.result.webCrawledURL%>
+				<%} catch (err){ console.log(err);	}%>
+				
+            </div>
+        </div>        
+        </div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
