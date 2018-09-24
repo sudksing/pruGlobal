@@ -1,1 +1,48 @@
-<%= result %>
+<!DOCTYPE html style="background-color: aliceblue;">
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+	
+	<main>		 
+        <div style="padding-top: 25px; padding-left: 25px; padding-right: 50px">			     
+            <% try {					
+					if(result){					
+					%>
+					<form method="post" action="/output"> 
+						<div class="form-button">
+							<button type="submit" class="btn btn-primary">Click Here to Refresh!</button>
+						</div>  
+					</form>				
+				<%}
+				} catch (err){ console.log(err);	}%>
+				
+        </div>
+
+        <div style="padding-top: 25px; padding-left: 25px; padding-right: 50px">			     
+            <% try {%>
+					<%= result %>		
+				<%} catch (err){ console.log(err);	}%>				
+        </div>
+
+
+
+
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
+
+
+
+
+

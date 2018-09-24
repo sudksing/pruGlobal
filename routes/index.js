@@ -26,9 +26,10 @@ router
     
 });
 
-router.get('/output', function (req, res, next) {
-  var op = wcHandler.getOutput(req, res);  
-  res.render('pages/output', {result: op});
-});
+router  
+  .post('/output', function (req, res, next) {
+    var op = wcHandler.getOutput(req, res);  
+    res.render('pages/output', {result: op});
+  });
 
 module.exports = router;
