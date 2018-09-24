@@ -19,13 +19,16 @@ router
     if (!url) {   
       //TODO - error handeling   
       res.render('pages/index',  {errorMsg: "URL is required!!!"});
-    } else {
-      console.log(req.body);
+    } else {      
        var response = await wcHandler.handleRequest(req, res);
        res.render('pages/index', {result : response});
     }
     
 });
 
+router.get('/output', function (req, res, next) {
+  var op = wcHandler.getOutput(req, res);  
+  res.render('pages/output', {result: op});
+});
 
 module.exports = router;

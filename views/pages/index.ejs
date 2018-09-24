@@ -28,10 +28,16 @@
 		<div class="row">
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">  
-				<% try { %>
-					<%= JSON.stringify(result) %>
-					<%= result.result.webCrawledURL%>
-				<%} catch (err){ console.log(err);	}%>
+				<% try {					
+					if(result){					
+					%>
+					<form method="get" action="/output"> 
+						<div class="form-button">
+							<button type="submit" class="btn btn-primary">Click Here to see output!</button>
+						</div>  
+					</form>				
+				<%}
+				} catch (err){ console.log(err);	}%>
 				
             </div>
         </div>        
