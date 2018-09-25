@@ -33,7 +33,7 @@ From technical design perspective, this application has two parts. First, it nav
   Visit -> 
   http://localhost:8080/
   
- # NOTES for USING this application
+ # NOTE for USING this application
  1. Default Values on first pages are;
     II. Enter URL to be Web Crawled: http://www.prudential.co.uk/
     II. Enter number of pages to be Web Crawled: 10
@@ -46,12 +46,17 @@ From technical design perspective, this application has two parts. First, it nav
 # Live Application Link
 http://wc-pru-global.1d35.starter-us-east-1.openshiftapps.com/
 
+In case if page does not render in first try then press F5 or click Refresh Button. Seems issue with Openshift.
+
 # Limitations
 1. Since the program is recursive, it is recommended that do not provide large number of page to be crawled. This application is using in-memory space so there is a chance that on larger number input the performance would degrade there as well could be a chance to go out of memory.
-
 2. First few seconds, the output page may show the blank page so it required to be Refreshed
+3. Field validation is not in place so please provide complete URL, for example, http://www.prudential.co.uk/ 
+
 
 # Future Enhancement
 1. Better memory management by introducing middleware such as, MQ
 2. Template based crawling 
 3. Out can be stored to DB or some files
+4. Error Handling, logging, and validation
+
