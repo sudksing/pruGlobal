@@ -20,7 +20,9 @@ From technical design perspective, this application has two parts. First, it nav
 
 # Workspace Setup
   $ git clone https://github.com/sudksing/pruGlobal.git pruGlobal
+  
   $ cd pruGlobal
+  
   $ npm install
   
 # Run the application
