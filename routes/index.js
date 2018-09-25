@@ -14,15 +14,16 @@ router
   })
   .post('/webCrawl', async function (req, res, next) {
     console.log("inside /webCrawler");
-    var url = req.body.webCrawledURL;
-    console.log("UrL: " + url);
-    if (!url) {   
-      //TODO - error handeling   
-      res.render('pages/index',  {errorMsg: "URL is required!!!"});
-    } else {      
+    var url = req.body.webCrawledURL;    
+    
+    //validation Logic
+    // if (!url) {   
+    //   //TODO - error handeling   
+    //   res.render('pages/index',  {errorMsg: "URL is required!!!"});
+    // } else {      
        var response = await wcHandler.handleRequest(req, res);
        res.render('pages/index', {result : response});
-    }
+    //}
     
 });
 
