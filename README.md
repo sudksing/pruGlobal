@@ -1,10 +1,10 @@
 # pruGlobal
 Web Crawler
 
-This two-page web application allows to crawl the href link based on supplying a given domain name and number of pages to be visited. First page tasks domain name and the number of pages as input. On submit in same page a button appears, clicking on that, navigates to output page. That basically shows the result in JSON format. Also, that is a "Refresh" button which allows to refresh the page to retrieve more information.
+This two-page web application allows to crawl the href link based on inputs given as domain name and number of pages to be visited. First page takes domain name and the page count as input. On clicking the submit button in the same page, another button appears next to it. Clicking on this button, site navigates to output page. Where it basically shows the result in JSON format. Also, there is a "Refresh" button on output page which allows to refresh the page to retrieve updated contents.
 
 # Design/Development Approach
-From technical design perspective, this application has two parts. First, it navigates the links in a recursive way and writes to a file in asynchronous way. Second, an URL has been exposed to show the result which also works asynchronously and display the contents in JSON format.
+From technical design perspective, this application has two parts. First, it navigates the links in a recursive way and writes to a file in asynchronous way. Second, an URL has been exposed to show the result which also works asynchronously and display the contents in JSON format. However in order to see the updated contents, page refresh is required.
 
 # Tools & technologies
 1. NodeJs
@@ -45,6 +45,8 @@ From technical design perspective, this application has two parts. First, it nav
 
 # Live Application Link
 http://wc-pru-global.1d35.starter-us-east-1.openshiftapps.com/
+
+THIS LINK REMAINS ACTIVE FOR 12 HRS THROUGHOUT THE DAY. IF YOU ARE NOT ABLE TO ACCESS IT, SEND ME A NOTE. I WILL MAKE IT LIVE.
 
 In case if page does not render in first try then press F5 or click Refresh Button. Seems issue with Openshift.
 
